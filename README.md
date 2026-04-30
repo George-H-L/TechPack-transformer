@@ -2,6 +2,8 @@
 
 Django web app that turns a natural-language garment description into a structured tech pack and renders it as an SVG. The model is a small encoder-decoder transformer trained on synthetic data, runs on CPU, and the production checkpoint is included via Git LFS so no training is needed to use the application.
 
+https://github.com/user-attachments/assets/2d9c67f7-8973-4fbe-8e04-b839ae16c5b4
+
 ## Quick start (Docker)
 
 ```
