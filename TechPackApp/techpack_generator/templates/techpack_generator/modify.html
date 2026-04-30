@@ -1,0 +1,208 @@
+{% extends 'techpack_generator/base.html' %}
+
+{% block title %}Modify | {{ techpack.name }}{% endblock %}
+
+{% block content %}
+<form method="POST" id="modify-form">
+    {% csrf_token %}
+    <div class="modify-layout">
+
+        <!-- controls -->
+        <div class="modify-controls">
+            <div class="modify-controls-title">Adjust Measurements</div>
+
+            {% if is_bottoms %}
+
+            <div class="slider-group">
+                <label class="form-label">
+                    Waist: <span id="val-waist">{{ measurements.waist }}</span>"
+                </label>
+                <input type="range" class="form-range preview-slider"
+                       name="waist" min="22" max="50" step="1"
+                       value="{{ measurements.waist }}"
+                       data-param="waist" data-display="val-waist">
+            </div>
+
+            <div class="slider-group">
+                <label class="form-label">
+                    Hips: <span id="val-hips">{{ measurements.hips }}</span>"
+                </label>
+                <input type="range" class="form-range preview-slider"
+                       name="hips" min="28" max="56" step="1"
+                       value="{{ measurements.hips }}"
+                       data-param="hips" data-display="val-hips">
+            </div>
+
+            <div class="slider-group">
+                <label class="form-label">
+                    Rise: <span id="val-rise">{{ measurements.rise }}</span>"
+                </label>
+                <input type="range" class="form-range preview-slider"
+                       name="rise" min="6" max="16" step="1"
+                       value="{{ measurements.rise }}"
+                       data-param="rise" data-display="val-rise">
+            </div>
+
+            <div class="slider-group">
+                <label class="form-label">
+                    Inseam: <span id="val-inseam">{{ measurements.inseam }}</span>"
+                </label>
+                <input type="range" class="form-range preview-slider"
+                       name="inseam" min="5" max="38" step="1"
+                       value="{{ measurements.inseam }}"
+                       data-param="inseam" data-display="val-inseam">
+            </div>
+
+            <!-- outseam and thigh derived from waist/hips/rise, no sliders -->
+            <input type="hidden" id="hidden-outseam" name="outseam" value="{{ measurements.outseam }}">
+            <input type="hidden" id="hidden-thigh"   name="thigh"   value="{{ measurements.thigh }}">
+
+            {% if not is_skirt %}
+            <div class="slider-group">
+                <label class="form-label">
+                    Leg Opening: <span id="val-leg-opening">{{ measurements.leg_opening }}</span>"
+                </label>
+                <input type="range" class="form-range preview-slider"
+                       name="leg_opening" min="6" max="28" step="1"
+                       value="{{ measurements.leg_opening }}"
+                       data-param="leg_opening" data-display="val-leg-opening">
+            </div>
+            {% endif %}
+
+            <!-- hidden material/construction fields preserved through save -->
+            <input type="hidden" name="fabric_type"   value="{{ material.fabric_type }}">
+            <input type="hidden" name="fabric_weight" value="{{ material.fabric_weight }}">
+            <input type="hidden" name="colour"        value="{{ material.colour }}">
+            <input type="hidden" name="seam_type"     value="{{ construction.seam_type }}">
+
+            {% else %}
+
+            <div class="slider-group">
+                <label class="form-label">
+                    Width (Chest): <span id="val-chest">{{ form.chest.value }}</span>"
+                </label>
+                <input type="range" class="form-range preview-slider"
+                       id="slider-chest" name="chest"
+                       min="14" max="50" step="1"
+                       value="{{ form.chest.value }}"
+                       data-param="chest" data-display="val-chest">
+            </div>
+
+            <div class="slider-group">
+                <label class="form-label">
+                    Body Length: <span id="val-body-length">{{ form.body_length.value }}</span>"
+                </label>
+                <input type="range" class="form-range preview-slider"
+                       id="slider-body-length" name="body_length"
+                       min="22" max="36" step="1"
+                       value="{{ form.body_length.value }}"
+                       data-param="body_length" data-display="val-body-length">
+            </div>
+
+            <div class="slider-group">
+                <label class="form-label">
+                    Sleeve Length: <span id="val-sleeve-length">{{ form.sleeve_length.value }}</span>"
+                </label>
+                <input type="range" class="form-range preview-slider"
+                       id="slider-sleeve-length" name="sleeve_length"
+                       min="3" max="35" step="1"
+                       value="{{ form.sleeve_length.value }}"
+                       data-param="sleeve_length" data-display="val-sleeve-length">
+            </div>
+
+            <div class="slider-group">
+                <label class="form-label">
+                    Sleeve Width: <span id="val-sleeve-width">{{ form.sleeve_width.value }}</span>
+                </label>
+                <input type="range" class="form-range preview-slider"
+                       id="slider-sleeve-width" name="sleeve_width"
+                       min="5" max="20" step="1"
+                       value="{{ form.sleeve_width.value }}"
+                       data-param="sleeve_width" data-display="val-sleeve-width">
+            </div>
+
+            <div class="slider-group">
+                <label class="form-label">
+                    Shoulder: <span id="val-shoulder">{{ form.shoulder.value }}</span>"
+                </label>
+                <input type="range" class="form-range preview-slider"
+                       id="slider-shoulder" name="shoulder"
+                       min="12" max="50" step="1"
+                       value="{{ form.shoulder.value }}"
+                       data-param="shoulder" data-display="val-shoulder">
+            </div>
+
+            {% if is_tank %}
+            <div class="slider-group">
+                <label class="form-label">
+                    Armhole: <span id="val-tank-divet">{{ form.tank_divet.value }}</span>
+                    <span style="font-weight:400; color:#999;">(0=racerback)</span>
+                </label>
+                <input type="range" class="form-range preview-slider"
+                       id="slider-tank-divet" name="tank_divet"
+                       min="0" max="10" step="1"
+                       value="{{ form.tank_divet.value }}"
+                       data-param="tank_divet" data-display="val-tank-divet">
+            </div>
+            {% else %}
+            <input type="hidden" name="tank_divet" value="{{ form.tank_divet.value }}">
+            {% endif %}
+
+            <!-- hidden fields preserved through save -->
+            <input type="hidden" name="waist"         value="{{ form.waist.value }}">
+            <input type="hidden" name="fabric_type"   value="{{ form.fabric_type.value }}">
+            <input type="hidden" name="fabric_weight" value="{{ form.fabric_weight.value }}">
+            <input type="hidden" name="colour"        value="{{ form.colour.value }}">
+            <input type="hidden" name="seam_type"     value="{{ form.seam_type.value }}">
+
+            {% endif %}
+
+            <button type="submit" class="modify-save-btn">Save Changes</button>
+        </div>
+
+        <!-- live preview -->
+        <div class="modify-preview">
+            <div id="svg-preview" class="modify-preview-box"></div>
+        </div>
+
+    </div>
+</form>
+
+<script>
+const PREVIEW_URL = "{% url 'techpack_generator:preview_svg' techpack.pk %}";
+const previewDiv  = document.getElementById('svg-preview');
+
+function updatePreview() {
+    const params = new URLSearchParams();
+    document.querySelectorAll('.preview-slider').forEach(function(s) {
+        params.set(s.dataset.param, s.value);
+    });
+    {% if is_bottoms %}
+    const rise   = parseInt(document.querySelector('[name="rise"]').value);
+    const inseam = parseInt(document.querySelector('[name="inseam"]').value);
+    const hips   = parseInt(document.querySelector('[name="hips"]').value);
+    const outseam = rise + inseam;
+    const thigh   = Math.round(hips * 0.55);
+    params.set('outseam', outseam);
+    params.set('thigh',   thigh);
+    document.getElementById('hidden-outseam').value = outseam;
+    document.getElementById('hidden-thigh').value   = thigh;
+    {% else %}
+    const chest = parseInt(document.getElementById('slider-chest').value);
+    params.set('waist', Math.round(chest * 0.95));
+    {% endif %}
+    fetch(PREVIEW_URL + '?' + params.toString())
+        .then(r => r.text())
+        .then(svg => { previewDiv.innerHTML = svg; });
+}
+
+document.querySelectorAll('.preview-slider').forEach(function(s) {
+    s.addEventListener('input', function() {
+        document.getElementById(s.dataset.display).textContent = s.value;
+        updatePreview();
+    });
+});
+
+updatePreview();
+</script>
+{% endblock %}

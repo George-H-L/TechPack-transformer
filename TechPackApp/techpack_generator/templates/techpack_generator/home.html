@@ -1,0 +1,58 @@
+{% extends "techpack_generator/base.html" %}
+
+{% block title %}TECH.PACK{% endblock %}
+
+{% block content %}
+<div class="home-content">
+    <h2 class="home-hero-title">
+        AI-POWERED<br>
+        <span>TECH PACK</span><br>
+        GENERATOR
+    </h2>
+    <p class="home-hero-sub">
+        Describe your garment. Get a production-ready tech pack in seconds.
+    </p>
+
+    <div class="home-cards">
+
+        {% if user.is_authenticated %}
+        <a href="{% url 'techpack_generator:create' %}" class="home-card accent-card">
+            <div class="home-card-label">Action</div>
+            <div class="home-card-title">Create</div>
+            <div class="home-card-desc">Generate a new tech pack from a garment description.</div>
+        </a>
+        {% else %}
+        <a href="#" class="home-card accent-card"
+           onclick="event.preventDefault(); openLoginModal();">
+            <div class="home-card-label">Action</div>
+            <div class="home-card-title">Create</div>
+            <div class="home-card-desc">Login or register to generate a tech pack.</div>
+        </a>
+        {% endif %}
+
+        {% if user.is_authenticated %}
+            {% if all_techpacks %}
+            <a href="{% url 'techpack_generator:modify' all_techpacks.0.pk %}" class="home-card">
+                <div class="home-card-label">Action</div>
+                <div class="home-card-title">Modify</div>
+                <div class="home-card-desc">Adjust measurements on an existing tech pack.</div>
+            </a>
+            {% else %}
+            <div class="home-card-disabled">
+                <div class="home-card-label" style="font-family:var(--font-mono);font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.18em;opacity:.6;margin-bottom:.5rem;">Action</div>
+                <div class="home-card-title" style="font-family:var(--font-head);font-size:1.6rem;font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:1.1;margin-bottom:.75rem;">Modify</div>
+                <div class="home-card-desc" style="font-family:var(--font-mono);font-size:.72rem;opacity:.7;line-height:1.6;">No tech packs yet. Create one first.</div>
+            </div>
+            {% endif %}
+        {% else %}
+        <a href="#" class="home-card"
+           onclick="event.preventDefault(); openLoginModal();">
+            <div class="home-card-label">Action</div>
+            <div class="home-card-title">Modify</div>
+            <div class="home-card-desc">Login to modify existing tech packs.</div>
+        </a>
+        {% endif %}
+
+    </div>
+</div>
+{% endblock %}

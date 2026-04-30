@@ -1,0 +1,39 @@
+{% extends "techpack_generator/base.html" %}
+
+{% block title %}Register | TECH.PACK{% endblock %}
+
+{% block content %}
+<div class="register-outer">
+    <div class="register-card">
+        <div class="register-card-title">Create Account</div>
+
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert error" style="margin-bottom:1rem;">{{ message }}</div>
+        {% endfor %}
+        {% endif %}
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="reg-username">Username</label>
+                <input type="text" id="reg-username" name="username" required autofocus>
+            </div>
+            <div class="form-group">
+                <label for="reg-password">Password</label>
+                <input type="password" id="reg-password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-password2">Confirm Password</label>
+                <input type="password" id="reg-password2" name="password2" required>
+            </div>
+            <button type="submit" class="btn-submit">Create Account</button>
+        </form>
+
+        <p class="register-link">
+            Already have an account?
+            <a href="#" onclick="event.preventDefault(); openLoginModal();">Login here</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

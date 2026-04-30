@@ -1,0 +1,374 @@
+{
+  "text_scores": {
+    "v1": {
+      "garment_type": {
+        "correct": 21,
+        "total": 24
+      },
+      "colour": {
+        "correct": 19,
+        "total": 22
+      },
+      "fabric_type": {
+        "correct": 24,
+        "total": 24
+      },
+      "fit": {
+        "correct": 9,
+        "total": 15
+      },
+      "length": {
+        "correct": 3,
+        "total": 3
+      },
+      "closure_type": {
+        "correct": 2,
+        "total": 4
+      },
+      "fabric_weight": {
+        "correct": 0,
+        "total": 2
+      },
+      "pockets": {
+        "correct": 0,
+        "total": 2
+      },
+      "seam_type": {
+        "correct": 1,
+        "total": 1
+      }
+    },
+    "v2": {
+      "garment_type": {
+        "correct": 20,
+        "total": 24
+      },
+      "colour": {
+        "correct": 16,
+        "total": 22
+      },
+      "fabric_type": {
+        "correct": 18,
+        "total": 24
+      },
+      "fit": {
+        "correct": 9,
+        "total": 15
+      },
+      "length": {
+        "correct": 2,
+        "total": 3
+      },
+      "closure_type": {
+        "correct": 1,
+        "total": 4
+      },
+      "fabric_weight": {
+        "correct": 0,
+        "total": 2
+      },
+      "pockets": {
+        "correct": 0,
+        "total": 2
+      },
+      "seam_type": {
+        "correct": 0,
+        "total": 1
+      }
+    },
+    "v3": {
+      "garment_type": {
+        "correct": 23,
+        "total": 24
+      },
+      "colour": {
+        "correct": 21,
+        "total": 22
+      },
+      "fabric_type": {
+        "correct": 22,
+        "total": 24
+      },
+      "fit": {
+        "correct": 14,
+        "total": 15
+      },
+      "length": {
+        "correct": 3,
+        "total": 3
+      },
+      "closure_type": {
+        "correct": 3,
+        "total": 4
+      },
+      "fabric_weight": {
+        "correct": 0,
+        "total": 2
+      },
+      "pockets": {
+        "correct": 0,
+        "total": 2
+      },
+      "seam_type": {
+        "correct": 0,
+        "total": 1
+      }
+    },
+    "v4": {
+      "garment_type": {
+        "correct": 21,
+        "total": 24
+      },
+      "colour": {
+        "correct": 19,
+        "total": 22
+      },
+      "fabric_type": {
+        "correct": 21,
+        "total": 24
+      },
+      "fit": {
+        "correct": 9,
+        "total": 15
+      },
+      "length": {
+        "correct": 3,
+        "total": 3
+      },
+      "closure_type": {
+        "correct": 2,
+        "total": 4
+      },
+      "fabric_weight": {
+        "correct": 0,
+        "total": 2
+      },
+      "pockets": {
+        "correct": 0,
+        "total": 2
+      },
+      "seam_type": {
+        "correct": 0,
+        "total": 1
+      }
+    }
+  },
+  "meas_scores": {
+    "v1": {
+      "tops": {
+        "chest": {
+          "correct": 15,
+          "total": 16
+        },
+        "waist": {
+          "correct": 16,
+          "total": 16
+        },
+        "sleeve_length": {
+          "correct": 15,
+          "total": 16
+        },
+        "body_length": {
+          "correct": 15,
+          "total": 16
+        },
+        "shoulder": {
+          "correct": 0,
+          "total": 16
+        }
+      },
+      "bottoms": {
+        "waist": {
+          "correct": 8,
+          "total": 8
+        },
+        "hips": {
+          "correct": 0,
+          "total": 8
+        },
+        "inseam": {
+          "correct": 8,
+          "total": 8
+        },
+        "outseam": {
+          "correct": 1,
+          "total": 8
+        },
+        "rise": {
+          "correct": 3,
+          "total": 8
+        },
+        "thigh": {
+          "correct": 0,
+          "total": 8
+        },
+        "leg_opening": {
+          "correct": 4,
+          "total": 8
+        }
+      }
+    },
+    "v2": {
+      "tops": {
+        "chest": {
+          "correct": 15,
+          "total": 16
+        },
+        "waist": {
+          "correct": 16,
+          "total": 16
+        },
+        "sleeve_length": {
+          "correct": 15,
+          "total": 16
+        },
+        "body_length": {
+          "correct": 15,
+          "total": 16
+        },
+        "shoulder": {
+          "correct": 0,
+          "total": 16
+        }
+      },
+      "bottoms": {
+        "waist": {
+          "correct": 6,
+          "total": 6
+        },
+        "hips": {
+          "correct": 1,
+          "total": 6
+        },
+        "inseam": {
+          "correct": 5,
+          "total": 6
+        },
+        "outseam": {
+          "correct": 1,
+          "total": 6
+        },
+        "rise": {
+          "correct": 5,
+          "total": 6
+        },
+        "thigh": {
+          "correct": 1,
+          "total": 6
+        },
+        "leg_opening": {
+          "correct": 3,
+          "total": 6
+        }
+      }
+    },
+    "v3": {
+      "tops": {
+        "chest": {
+          "correct": 15,
+          "total": 16
+        },
+        "waist": {
+          "correct": 16,
+          "total": 16
+        },
+        "sleeve_length": {
+          "correct": 15,
+          "total": 16
+        },
+        "body_length": {
+          "correct": 16,
+          "total": 16
+        },
+        "shoulder": {
+          "correct": 0,
+          "total": 16
+        }
+      },
+      "bottoms": {
+        "waist": {
+          "correct": 7,
+          "total": 7
+        },
+        "hips": {
+          "correct": 0,
+          "total": 7
+        },
+        "inseam": {
+          "correct": 7,
+          "total": 7
+        },
+        "outseam": {
+          "correct": 0,
+          "total": 7
+        },
+        "rise": {
+          "correct": 3,
+          "total": 7
+        },
+        "thigh": {
+          "correct": 0,
+          "total": 7
+        },
+        "leg_opening": {
+          "correct": 4,
+          "total": 7
+        }
+      }
+    },
+    "v4": {
+      "tops": {
+        "chest": {
+          "correct": 15,
+          "total": 16
+        },
+        "waist": {
+          "correct": 16,
+          "total": 16
+        },
+        "sleeve_length": {
+          "correct": 15,
+          "total": 16
+        },
+        "body_length": {
+          "correct": 15,
+          "total": 16
+        },
+        "shoulder": {
+          "correct": 0,
+          "total": 16
+        }
+      },
+      "bottoms": {
+        "waist": {
+          "correct": 7,
+          "total": 7
+        },
+        "hips": {
+          "correct": 1,
+          "total": 7
+        },
+        "inseam": {
+          "correct": 6,
+          "total": 7
+        },
+        "outseam": {
+          "correct": 0,
+          "total": 7
+        },
+        "rise": {
+          "correct": 3,
+          "total": 7
+        },
+        "thigh": {
+          "correct": 1,
+          "total": 7
+        },
+        "leg_opening": {
+          "correct": 5,
+          "total": 7
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+# docker compose up --build  -> http://localhost:8000
+
+services:
+  web:
+    build: ./TechPackApp
+    container_name: techpack
+    ports:
+      - "8000:8000"
+    volumes:
+      - sqlite_data:/data
+    environment:
+      - SECRET_KEY=change-me-for-prod
+      - DEBUG=0
+      - ALLOWED_HOSTS=localhost,127.0.0.1
+      - DATABASE_PATH=/data/db.sqlite3
+    restart: unless-stopped
+
+volumes:
+  sqlite_data:

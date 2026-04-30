@@ -1,0 +1,1387 @@
+{
+  "run_at": "2026-04-24T00:37:39",
+  "results": {
+    "v1": [
+      {
+        "prompt": "slim fit navy wool blazer",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9997683465480804
+      },
+      {
+        "prompt": "straight leg dark wash denim jeans",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999515460087702
+      },
+      {
+        "prompt": "oversized charcoal grey cotton hoodie with kangaroo pocket",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999340644904545
+      },
+      {
+        "prompt": "high waisted olive green cargo trousers with six pockets",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.996157705783844
+      },
+      {
+        "prompt": "fitted burgundy ribbed cotton t-shirt with crew neck",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999092221260071
+      },
+      {
+        "prompt": "relaxed fit cream linen shirt with chest pocket",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9944836513784896
+      },
+      {
+        "prompt": "cropped black puffer jacket with zip front",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9995599346501487
+      },
+      {
+        "prompt": "wide leg navy blue wool trousers with pleated front",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9939384689697852
+      },
+      {
+        "prompt": "fitted emerald green satin midi dress with cowl neck",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9997800642793829
+      },
+      {
+        "prompt": "heavyweight charcoal grey sweatshirt with raglan sleeves",
+        "garment_match": 0,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.999934754201344
+      },
+      {
+        "prompt": "jeans",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999830080912664
+      },
+      {
+        "prompt": "hoodie",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999738505908421
+      },
+      {
+        "prompt": "trousers",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9797178919498737
+      },
+      {
+        "prompt": "coat",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9998808119978223
+      },
+      {
+        "prompt": "blakc leather jacet with zippers",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999716026442391
+      },
+      {
+        "prompt": "grey woll blazer slim fit",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9994952295507703
+      },
+      {
+        "prompt": "cottn t shirt white oversized",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999393905912127
+      },
+      {
+        "prompt": "skiny jens dark blue ankle lenght",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 4,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9996014965905083
+      },
+      {
+        "prompt": "beige chinos regulr fit with belt loops",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9676665617869451
+      },
+      {
+        "prompt": "leather jacket with 30 inch inseam",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999872446060181
+      },
+      {
+        "prompt": "slim fit jeans with 40 inch chest measurement",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.999945709338555
+      },
+      {
+        "prompt": "cotton hoodie with waistband height and rise measurements",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999445539254409
+      },
+      {
+        "prompt": "black t-shirt 38 inch chest medium weight cotton",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999818631580898
+      },
+      {
+        "prompt": "navy chinos 32 inch waist 30 inch inseam straight leg",
+        "garment_match": 0,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999267501490456
+      },
+      {
+        "prompt": "wool coat 180gsm knee length double breasted",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9987046079976218
+      },
+      {
+        "prompt": "cotton joggers 280gsm relaxed fit with elastic waist",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9963003488687369
+      },
+      {
+        "prompt": "white linen shirt 42 chest slim fit 180gsm",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.998071723162454
+      },
+      {
+        "prompt": "something casual for a barbecue",
+        "garment_match": null,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.999950613294329
+      },
+      {
+        "prompt": "id like a smart casual shirt for work",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9827201719808566
+      },
+      {
+        "prompt": "make me a cosy winter jumper in dark green",
+        "garment_match": 0,
+        "json_valid": 1,
+        "fields_present": 4,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9928710129525926
+      },
+      {
+        "prompt": "need some comfortable summer shorts for the beach",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9995484120315976
+      },
+      {
+        "prompt": "want a going out top in something silky and fitted",
+        "garment_match": null,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9996688961982727
+      },
+      {
+        "prompt": "can you make a simple everyday black t-shirt",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 4,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9205697012823199
+      },
+      {
+        "prompt": "jacket",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9967166071186379
+      },
+      {
+        "prompt": "something warm for winter in dark colours",
+        "garment_match": null,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9980997397349431
+      },
+      {
+        "prompt": "SLIM FIT BLACK DENIM JEANS WITH DISTRESSING AND SILVER ZIP FLY 32 INCH WAIST",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 4,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9998557832505968
+      },
+      null,
+      {
+        "prompt": "OVERSIZED RED HOODIE HEAVYWEIGHT COTTON DROP SHOULDER",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9998357594013214
+      }
+    ],
+    "v2": [
+      {
+        "prompt": "slim fit navy wool blazer",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.999798766204289
+      },
+      {
+        "prompt": "straight leg dark wash denim jeans",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9998732530153714
+      },
+      {
+        "prompt": "oversized charcoal grey cotton hoodie with kangaroo pocket",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.999873833996909
+      },
+      {
+        "prompt": "high waisted olive green cargo trousers with six pockets",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9962325554627639
+      },
+      {
+        "prompt": "fitted burgundy ribbed cotton t-shirt with crew neck",
+        "garment_match": 0,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999652930668422
+      },
+      {
+        "prompt": "relaxed fit cream linen shirt with chest pocket",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9922450811880337
+      },
+      {
+        "prompt": "cropped black puffer jacket with zip front",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.999406635761261
+      },
+      {
+        "prompt": "wide leg navy blue wool trousers with pleated front",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9996355772018433
+      },
+      {
+        "prompt": "fitted emerald green satin midi dress with cowl neck",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.999925434589386
+      },
+      {
+        "prompt": "heavyweight charcoal grey sweatshirt with raglan sleeves",
+        "garment_match": 0,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9998348866190229
+      },
+      {
+        "prompt": "jeans",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999386412756783
+      },
+      {
+        "prompt": "hoodie",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9997992387839726
+      },
+      {
+        "prompt": "trousers",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999192825385502
+      },
+      {
+        "prompt": "coat",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9987683381353106
+      },
+      {
+        "prompt": "blakc leather jacet with zippers",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999605970723289
+      },
+      {
+        "prompt": "grey woll blazer slim fit",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9998067021369934
+      },
+      {
+        "prompt": "cottn t shirt white oversized",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9998322640146527
+      },
+      {
+        "prompt": "skiny jens dark blue ankle lenght",
+        "garment_match": 0,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9941975428507879
+      },
+      {
+        "prompt": "beige chinos regulr fit with belt loops",
+        "garment_match": 0,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9998536152499062
+      },
+      {
+        "prompt": "leather jacket with 30 inch inseam",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999721731458392
+      },
+      {
+        "prompt": "slim fit jeans with 40 inch chest measurement",
+        "garment_match": 0,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9949288114620619
+      },
+      {
+        "prompt": "cotton hoodie with waistband height and rise measurements",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9998870023659298
+      },
+      {
+        "prompt": "black t-shirt 38 inch chest medium weight cotton",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999830722808838
+      },
+      {
+        "prompt": "navy chinos 32 inch waist 30 inch inseam straight leg",
+        "garment_match": 0,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9998457304068974
+      },
+      {
+        "prompt": "wool coat 180gsm knee length double breasted",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9981306748730796
+      },
+      {
+        "prompt": "cotton joggers 280gsm relaxed fit with elastic waist",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.996591789123955
+      },
+      {
+        "prompt": "white linen shirt 42 chest slim fit 180gsm",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9976286636583637
+      },
+      {
+        "prompt": "something casual for a barbecue",
+        "garment_match": null,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9998811483383179
+      },
+      {
+        "prompt": "id like a smart casual shirt for work",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9959158775673213
+      },
+      {
+        "prompt": "make me a cosy winter jumper in dark green",
+        "garment_match": 0,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9971454867294857
+      },
+      {
+        "prompt": "need some comfortable summer shorts for the beach",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9932502286045232
+      },
+      {
+        "prompt": "want a going out top in something silky and fitted",
+        "garment_match": null,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.999696801106135
+      },
+      {
+        "prompt": "can you make a simple everyday black t-shirt",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999707596642631
+      },
+      {
+        "prompt": "jacket",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9850681539005951
+      },
+      {
+        "prompt": "something warm for winter in dark colours",
+        "garment_match": null,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9998707121068781
+      },
+      {
+        "prompt": "SLIM FIT BLACK DENIM JEANS WITH DISTRESSING AND SILVER ZIP FLY 32 INCH WAIST",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999397056443351
+      },
+      {
+        "prompt": "a]b[c invalid!! chars...",
+        "garment_match": null,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.999370836549335
+      },
+      {
+        "prompt": "OVERSIZED RED HOODIE HEAVYWEIGHT COTTON DROP SHOULDER",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9997033093656812
+      }
+    ],
+    "v3": [
+      {
+        "prompt": "slim fit navy wool blazer",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999703892639705
+      },
+      {
+        "prompt": "straight leg dark wash denim jeans",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999995690125686
+      },
+      {
+        "prompt": "oversized charcoal grey cotton hoodie with kangaroo pocket",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999960916382926
+      },
+      {
+        "prompt": "high waisted olive green cargo trousers with six pockets",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9993137075350835
+      },
+      {
+        "prompt": "fitted burgundy ribbed cotton t-shirt with crew neck",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999987227576119
+      },
+      {
+        "prompt": "relaxed fit cream linen shirt with chest pocket",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9993913655553982
+      },
+      {
+        "prompt": "cropped black puffer jacket with zip front",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9995603348527636
+      },
+      {
+        "prompt": "wide leg navy blue wool trousers with pleated front",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9997858359263494
+      },
+      {
+        "prompt": "fitted emerald green satin midi dress with cowl neck",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999985694885254
+      },
+      {
+        "prompt": "heavyweight charcoal grey sweatshirt with raglan sleeves",
+        "garment_match": 0,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999991059303284
+      },
+      {
+        "prompt": "jeans",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999994406333337
+      },
+      {
+        "prompt": "hoodie",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999983480998448
+      },
+      {
+        "prompt": "trousers",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999444209612333
+      },
+      {
+        "prompt": "coat",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999681242874691
+      },
+      {
+        "prompt": "blakc leather jacet with zippers",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.999999497617994
+      },
+      {
+        "prompt": "grey woll blazer slim fit",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999957254954747
+      },
+      {
+        "prompt": "cottn t shirt white oversized",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999989356313433
+      },
+      {
+        "prompt": "skiny jens dark blue ankle lenght",
+        "garment_match": 0,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.992740198969841
+      },
+      {
+        "prompt": "beige chinos regulr fit with belt loops",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999891886344323
+      },
+      {
+        "prompt": "leather jacket with 30 inch inseam",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999907101903643
+      },
+      {
+        "prompt": "slim fit jeans with 40 inch chest measurement",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999993947836069
+      },
+      {
+        "prompt": "cotton hoodie with waistband height and rise measurements",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.999998424734388
+      },
+      {
+        "prompt": "black t-shirt 38 inch chest medium weight cotton",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999989356313433
+      },
+      {
+        "prompt": "navy chinos 32 inch waist 30 inch inseam straight leg",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999355035168784
+      },
+      {
+        "prompt": "wool coat 180gsm knee length double breasted",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999424474579948
+      },
+      {
+        "prompt": "cotton joggers 280gsm relaxed fit with elastic waist",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9993006587028503
+      },
+      {
+        "prompt": "white linen shirt 42 chest slim fit 180gsm",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9620108774730137
+      },
+      {
+        "prompt": "something casual for a barbecue",
+        "garment_match": null,
+        "json_valid": 1,
+        "fields_present": 4,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999842246373495
+      },
+      {
+        "prompt": "id like a smart casual shirt for work",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 4,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999977499246597
+      },
+      {
+        "prompt": "make me a cosy winter jumper in dark green",
+        "garment_match": 0,
+        "json_valid": 1,
+        "fields_present": 4,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9964872399965922
+      },
+      {
+        "prompt": "need some comfortable summer shorts for the beach",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999322162734138
+      },
+      {
+        "prompt": "want a going out top in something silky and fitted",
+        "garment_match": null,
+        "json_valid": 1,
+        "fields_present": 4,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999938011169434
+      },
+      {
+        "prompt": "can you make a simple everyday black t-shirt",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999989867210388
+      },
+      {
+        "prompt": "jacket",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999990292957851
+      },
+      {
+        "prompt": "something warm for winter in dark colours",
+        "garment_match": null,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9886957481006622
+      },
+      null,
+      {
+        "prompt": "a]b[c invalid!! chars...",
+        "garment_match": null,
+        "json_valid": 1,
+        "fields_present": 4,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999913999012539
+      },
+      {
+        "prompt": "OVERSIZED RED HOODIE HEAVYWEIGHT COTTON DROP SHOULDER",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999952571732658
+      }
+    ],
+    "v4": [
+      {
+        "prompt": "slim fit navy wool blazer",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999477820737022
+      },
+      {
+        "prompt": "straight leg dark wash denim jeans",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.999996515420767
+      },
+      {
+        "prompt": "oversized charcoal grey cotton hoodie with kangaroo pocket",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999945504324776
+      },
+      {
+        "prompt": "high waisted olive green cargo trousers with six pockets",
+        "garment_match": 0,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9995512045346774
+      },
+      {
+        "prompt": "fitted burgundy ribbed cotton t-shirt with crew neck",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999990633555821
+      },
+      {
+        "prompt": "relaxed fit cream linen shirt with chest pocket",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9977148334286003
+      },
+      {
+        "prompt": "cropped black puffer jacket with zip front",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.999952780348914
+      },
+      {
+        "prompt": "wide leg navy blue wool trousers with pleated front",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9973478088012109
+      },
+      {
+        "prompt": "fitted emerald green satin midi dress with cowl neck",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999940720471469
+      },
+      {
+        "prompt": "heavyweight charcoal grey sweatshirt with raglan sleeves",
+        "garment_match": 0,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999954870768956
+      },
+      {
+        "prompt": "jeans",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999977166836078
+      },
+      {
+        "prompt": "hoodie",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999952486583165
+      },
+      {
+        "prompt": "trousers",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9826501791293805
+      },
+      {
+        "prompt": "coat",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9998331665992737
+      },
+      {
+        "prompt": "blakc leather jacet with zippers",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999991825648716
+      },
+      {
+        "prompt": "grey woll blazer slim fit",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 4,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.999958761036396
+      },
+      {
+        "prompt": "cottn t shirt white oversized",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999962874821254
+      },
+      {
+        "prompt": "skiny jens dark blue ankle lenght",
+        "garment_match": 0,
+        "json_valid": 1,
+        "fields_present": 4,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9969189912080765
+      },
+      {
+        "prompt": "beige chinos regulr fit with belt loops",
+        "garment_match": 0,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9957198415483747
+      },
+      {
+        "prompt": "leather jacket with 30 inch inseam",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9921385094216612
+      },
+      {
+        "prompt": "slim fit jeans with 40 inch chest measurement",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999982393704928
+      },
+      {
+        "prompt": "cotton hoodie with waistband height and rise measurements",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999929325921195
+      },
+      {
+        "prompt": "black t-shirt 38 inch chest medium weight cotton",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999978201729911
+      },
+      {
+        "prompt": "navy chinos 32 inch waist 30 inch inseam straight leg",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999970014278705
+      },
+      {
+        "prompt": "wool coat 180gsm knee length double breasted",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9993362256458828
+      },
+      {
+        "prompt": "cotton joggers 280gsm relaxed fit with elastic waist",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9984651437172523
+      },
+      {
+        "prompt": "white linen shirt 42 chest slim fit 180gsm",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9904275096805021
+      },
+      {
+        "prompt": "something casual for a barbecue",
+        "garment_match": null,
+        "json_valid": 1,
+        "fields_present": 4,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9915856868028641
+      },
+      {
+        "prompt": "id like a smart casual shirt for work",
+        "garment_match": 0,
+        "json_valid": 1,
+        "fields_present": 4,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999176740646363
+      },
+      null,
+      {
+        "prompt": "need some comfortable summer shorts for the beach",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9998937812116411
+      },
+      {
+        "prompt": "want a going out top in something silky and fitted",
+        "garment_match": null,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.999992569287618
+      },
+      {
+        "prompt": "can you make a simple everyday black t-shirt",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999968324388776
+      },
+      {
+        "prompt": "jacket",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999978542327881
+      },
+      {
+        "prompt": "something warm for winter in dark colours",
+        "garment_match": null,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999961311166937
+      },
+      {
+        "prompt": "SLIM FIT BLACK DENIM JEANS WITH DISTRESSING AND SILVER ZIP FLY 32 INCH WAIST",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999974782650287
+      },
+      {
+        "prompt": "a]b[c invalid!! chars...",
+        "garment_match": null,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999845988220639
+      },
+      {
+        "prompt": "OVERSIZED RED HOODIE HEAVYWEIGHT COTTON DROP SHOULDER",
+        "garment_match": 1,
+        "json_valid": 1,
+        "fields_present": 7,
+        "fields_total": 7,
+        "measurements_valid": 1,
+        "mean_confidence": 0.9999837534768241
+      }
+    ]
+  },
+  "summary": {
+    "v1": {
+      "json_rate": "37/37",
+      "avg_fields": 0.954,
+      "garment_rate": "31/34",
+      "measures_rate": "37/37",
+      "avg_confidence": 0.995
+    },
+    "v2": {
+      "json_rate": "38/38",
+      "avg_fields": 1.0,
+      "garment_rate": "27/34",
+      "measures_rate": "38/38",
+      "avg_confidence": 0.998
+    },
+    "v3": {
+      "json_rate": "37/37",
+      "avg_fields": 0.942,
+      "garment_rate": "30/33",
+      "measures_rate": "37/37",
+      "avg_confidence": 0.998
+    },
+    "v4": {
+      "json_rate": "37/37",
+      "avg_fields": 0.954,
+      "garment_rate": "28/33",
+      "measures_rate": "37/37",
+      "avg_confidence": 0.998
+    }
+  }
+}

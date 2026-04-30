@@ -1,0 +1,67 @@
+# --- python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.Python
+
+# --- virtualenvs ---
+venv/
+.venv/
+env/
+
+# --- django ---
+*.sqlite3
+*.sqlite3-journal
+db.sqlite3
+/staticfiles/
+/media/
+local_settings.py
+.env
+.env.*
+
+# --- ml weights ---
+# Only the production checkpoint (best_model_v3.pth) is shipped, via Git LFS,
+# so `docker compose up --build` works out of the box. Experimental v1/v2/v4
+# and intermediate checkpoints are not distributed.
+*.pth
+!TechPackApp/techpack_generator/models/best_model_v3.pth
+*.ckpt
+*.bin
+*.onnx
+*.safetensors
+TechPackApp/techpack_generator/models/checkpoints/
+
+# --- training data (not pushed) ---
+# Schema and a single tiny example are tracked so the data shape is clear;
+# bulk training/validation corpora and intermediate checkpoints are not.
+TechPackApp/techpack_generator/training_data/checkpoint_*.json
+TechPackApp/techpack_generator/training_data/combined_train.json
+TechPackApp/techpack_generator/training_data/combined_val.json
+TechPackApp/techpack_generator/training_data/synthetic/
+
+# --- ide / editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- os junk ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- build / coverage / logs ---
+*.log
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+
+# --- docker local state ---
+.docker/
+*.pid

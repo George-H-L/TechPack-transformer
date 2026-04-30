@@ -1,0 +1,256 @@
+{% extends 'techpack_generator/base.html' %}
+
+{% block title %}Create | TECH.PACK{% endblock %}
+
+{% block content %}
+<div class="create-outer" id="create-outer">
+
+    <!-- ── HERO STATE ───────────────────────────── -->
+    <div class="create-hero" id="hero">
+        <h1>GENERATE<br><span>YOUR</span><br>TECH PACK</h1>
+
+        <div class="create-input-panel">
+            <div class="create-input-row">
+                <input type="text" id="hero-input"
+                       placeholder="describe your garment…"
+                       autocomplete="off"
+                       onkeydown="if(event.key==='Enter') startGenerate()">
+                <button onclick="startGenerate()">Generate →</button>
+            </div>
+        </div>
+
+        <div class="chip-row">
+            <span class="chip" onclick="fillInput('straight leg dark wash denim jeans')">dark wash jeans</span>
+            <span class="chip" onclick="fillInput('oversized charcoal cotton hoodie')">oversized hoodie</span>
+            <span class="chip" onclick="fillInput('fitted burgundy ribbed cotton t-shirt')">burgundy tee</span>
+            <span class="chip" onclick="fillInput('relaxed linen shirt with chest pocket')">linen shirt</span>
+            <span class="chip" onclick="fillInput('high waist olive cargo trousers')">cargo trousers</span>
+        </div>
+    </div>
+
+    <!-- ── CHAT STATE ───────────────────────────── -->
+    <div class="chat-pane" id="chat-pane" style="display:none;">
+        <div class="chat-messages" id="chat-messages"></div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+const CREATE_URL = "{% url 'techpack_generator:create' %}";
+
+function getCsrfToken() {
+    const m = document.cookie.match(/csrftoken=([^;]+)/);
+    return m ? decodeURIComponent(m[1]) : '';
+}
+
+function fillInput(text) {
+    document.getElementById('hero-input').value = text;
+    document.getElementById('hero-input').focus();
+}
+
+// ── state helpers ──────────────────────────────────────
+function showHero() {
+    document.getElementById('hero').style.display = '';
+    document.getElementById('chat-pane').style.display = 'none';
+    document.getElementById('chat-messages').innerHTML = '';
+    document.getElementById('hero-input').value = '';
+    document.getElementById('hero-input').focus();
+}
+
+function showChat() {
+    document.getElementById('hero').style.display = 'none';
+    document.getElementById('chat-pane').style.display = '';
+}
+
+function scrollMessages() {
+    const el = document.getElementById('chat-messages');
+    el.scrollTop = el.scrollHeight;
+}
+
+// ── bubble builders ────────────────────────────────────
+function addUserBubble(text) {
+    const div = document.createElement('div');
+    div.className = 'chat-bubble user';
+    div.innerHTML = '<div class="bubble-label">You</div>' + escHtml(text);
+    document.getElementById('chat-messages').appendChild(div);
+    scrollMessages();
+}
+
+function addTypingIndicator() {
+    const div = document.createElement('div');
+    div.className = 'typing-indicator';
+    div.id = 'typing';
+    div.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
+    document.getElementById('chat-messages').appendChild(div);
+    scrollMessages();
+}
+
+function removeTypingIndicator() {
+    const t = document.getElementById('typing');
+    if (t) t.remove();
+}
+
+function addErrorBubble(msg) {
+    const div = document.createElement('div');
+    div.className = 'chat-bubble assistant';
+    div.innerHTML = '<div class="bubble-label">System</div>'
+        + '<span style="color:#c0392b;font-weight:700;">' + escHtml(msg) + '</span>'
+        + '<div class="chat-actions"><button class="btn-chat-new" onclick="showHero()">← Try Again</button></div>';
+    document.getElementById('chat-messages').appendChild(div);
+    scrollMessages();
+}
+
+function addFollowupBubble(questions) {
+    const div = document.createElement('div');
+    div.className = 'chat-bubble assistant';
+    let inner = '<div class="bubble-label">Tech.Pack AI</div>'
+        + '<p style="margin-bottom:0.75rem;">Just a few quick questions to nail the details:</p>'
+        + '<div class="followup-form">';
+    questions.forEach(function(q) {
+        inner += '<div class="fq-item">'
+            + '<label>' + escHtml(q.question) + '</label>'
+            + '<input type="text" name="fq_' + escHtml(q.field) + '" placeholder="your answer" autocomplete="off">'
+            + '</div>';
+    });
+    inner += '<button class="followup-submit" onclick="submitFollowup(this)">Confirm →</button></div>';
+    div.innerHTML = inner;
+    document.getElementById('chat-messages').appendChild(div);
+    // focus first input
+    const first = div.querySelector('input');
+    if (first) first.focus();
+    scrollMessages();
+}
+
+function addPreviewBubble(svg, fields) {
+    const div = document.createElement('div');
+    div.className = 'chat-bubble assistant';
+
+    // field grid
+    let grid = '<div class="preview-fields">';
+    fields.forEach(function(f) {
+        grid += '<div class="pf-item"><div class="pf-key">' + escHtml(f.key) + '</div>'
+              + '<div class="pf-val">' + escHtml(f.val) + '</div></div>';
+    });
+    grid += '</div>';
+
+    div.innerHTML = '<div class="bubble-label">Tech.Pack AI</div>'
+        + '<p style="margin-bottom:0.6rem;">Here\'s your tech pack. Looking good?</p>'
+        + '<div class="preview-svg-wrap">' + svg + '</div>'
+        + grid
+        + '<div class="chat-actions">'
+        + '<button class="btn-save" onclick="doSave(\'save\')">Save Tech Pack</button>'
+        + '<button class="btn-chat-modify" onclick="doSave(\'save_and_modify\')">Save &amp; Modify</button>'
+        + '<button class="btn-chat-new" onclick="showHero()">Start Over</button>'
+        + '</div>';
+
+    document.getElementById('chat-messages').appendChild(div);
+    scrollMessages();
+}
+
+// ── AJAX calls ─────────────────────────────────────────
+function startGenerate() {
+    const input = document.getElementById('hero-input');
+    const description = input.value.trim();
+    if (!description) { input.focus(); return; }
+
+    showChat();
+    addUserBubble(description);
+    addTypingIndicator();
+
+    const fd = new FormData();
+    fd.append('action', 'generate');
+    fd.append('description', description);
+
+    fetch(CREATE_URL, {
+        method: 'POST',
+        headers: { 'X-CSRFToken': getCsrfToken(), 'X-Requested-With': 'XMLHttpRequest' },
+        body: fd,
+    })
+    .then(r => r.json())
+    .then(handleResponse)
+    .catch(function() {
+        removeTypingIndicator();
+        addErrorBubble('Connection error. Please try again.');
+    });
+}
+
+function submitFollowup(btn) {
+    // collect answers from the closest followup-form
+    const form = btn.closest('.followup-form');
+    const inputs = form.querySelectorAll('input[type="text"]');
+    const fd = new FormData();
+    fd.append('action', 'followup');
+    let answers = [];
+    inputs.forEach(function(inp) {
+        fd.append(inp.name, inp.value.trim());
+        if (inp.value.trim()) answers.push(inp.value.trim());
+    });
+
+    // disable form while processing
+    form.querySelectorAll('input, button').forEach(el => el.disabled = true);
+
+    addUserBubble(answers.length ? answers.join(', ') : '(skipped)');
+    addTypingIndicator();
+
+    fetch(CREATE_URL, {
+        method: 'POST',
+        headers: { 'X-CSRFToken': getCsrfToken(), 'X-Requested-With': 'XMLHttpRequest' },
+        body: fd,
+    })
+    .then(r => r.json())
+    .then(handleResponse)
+    .catch(function() {
+        removeTypingIndicator();
+        addErrorBubble('Connection error. Please try again.');
+    });
+}
+
+function doSave(action) {
+    // disable all chat action buttons to prevent double-saves
+    document.querySelectorAll('.chat-actions button').forEach(b => b.disabled = true);
+
+    const fd = new FormData();
+    fd.append('action', action);
+
+    fetch(CREATE_URL, {
+        method: 'POST',
+        headers: { 'X-CSRFToken': getCsrfToken(), 'X-Requested-With': 'XMLHttpRequest' },
+        body: fd,
+    })
+    .then(r => r.json())
+    .then(function(data) {
+        if (data.type === 'redirect') {
+            window.location.href = data.url;
+        } else {
+            addErrorBubble(data.message || 'Save failed.');
+            document.querySelectorAll('.chat-actions button').forEach(b => b.disabled = false);
+        }
+    })
+    .catch(function() {
+        addErrorBubble('Connection error during save.');
+        document.querySelectorAll('.chat-actions button').forEach(b => b.disabled = false);
+    });
+}
+
+function handleResponse(data) {
+    removeTypingIndicator();
+    if (data.type === 'followup') {
+        addFollowupBubble(data.questions);
+    } else if (data.type === 'preview') {
+        addPreviewBubble(data.svg, data.fields);
+    } else {
+        addErrorBubble(data.message || 'Something went wrong.');
+    }
+}
+
+function escHtml(str) {
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+}
+</script>
+{% endblock %}

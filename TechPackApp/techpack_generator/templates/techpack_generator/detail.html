@@ -1,0 +1,217 @@
+{% extends 'techpack_generator/base.html' %}
+
+{% block title %}{{ techpack.name }} | TECH.PACK{% endblock %}
+
+{% block content %}
+<div class="content-card">
+
+    <h1 class="page-title">{{ techpack.name }}</h1>
+
+    <!-- meta row -->
+    <div class="detail-meta">
+        {% if techpack.is_ai_generated %}
+        <span class="tag accent">AI Generated</span>
+        {% endif %}
+        <span class="detail-date">Created {{ techpack.created_at|date:"d M Y" }}</span>
+        <span class="detail-date">Updated {{ techpack.updated_at|date:"d M Y" }}</span>
+    </div>
+
+    <!-- prompt -->
+    {% if techpack.prompt %}
+    <div class="prompt-quote">
+        <div class="pq-label">Prompt</div>
+        <div class="pq-text">"{{ techpack.prompt }}"</div>
+    </div>
+    {% endif %}
+
+    <!-- svg -->
+    <div class="visual-preview">
+        {{ garment_svg|safe }}
+    </div>
+
+    <!-- details grid -->
+    <div class="detail-grid">
+
+        <!-- basic info -->
+        <div class="detail-section">
+            <div class="detail-section-head">Basic Info</div>
+            <div class="detail-section-body">
+                <div class="detail-row">
+                    <span class="detail-key">Garment</span>
+                    <span class="detail-val">{{ techpack.json_data.garment_type }}</span>
+                </div>
+                {% if techpack.json_data.style.fit %}
+                <div class="detail-row">
+                    <span class="detail-key">Fit</span>
+                    <span class="detail-val">{{ techpack.json_data.style.fit }}</span>
+                </div>
+                {% endif %}
+                {% if techpack.json_data.style.length %}
+                <div class="detail-row">
+                    <span class="detail-key">Length</span>
+                    <span class="detail-val">{{ techpack.json_data.style.length }}</span>
+                </div>
+                {% endif %}
+                {% if techpack.json_data.style.details %}
+                <div class="detail-row">
+                    <span class="detail-key">Details</span>
+                    <span class="detail-val">{{ techpack.json_data.style.details }}</span>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- material -->
+        <div class="detail-section">
+            <div class="detail-section-head">Material</div>
+            <div class="detail-section-body">
+                {% if techpack.json_data.material.colour %}
+                <div class="detail-row">
+                    <span class="detail-key">Colour</span>
+                    <span class="detail-val">{{ techpack.json_data.material.colour }}</span>
+                </div>
+                {% endif %}
+                {% if techpack.json_data.material.fabric_type %}
+                <div class="detail-row">
+                    <span class="detail-key">Fabric</span>
+                    <span class="detail-val">{{ techpack.json_data.material.fabric_type }}</span>
+                </div>
+                {% endif %}
+                {% if techpack.json_data.material.fabric_weight %}
+                <div class="detail-row">
+                    <span class="detail-key">Weight</span>
+                    <span class="detail-val">{{ techpack.json_data.material.fabric_weight }}</span>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- measurements -->
+        <div class="detail-section">
+            <div class="detail-section-head">Measurements</div>
+            <div class="detail-section-body">
+                {% if is_bottoms %}
+                    {% if techpack.json_data.measurements.waist %}
+                    <div class="detail-row">
+                        <span class="detail-key">Waist</span>
+                        <span class="detail-val">{{ techpack.json_data.measurements.waist }}"</span>
+                    </div>
+                    {% endif %}
+                    {% if techpack.json_data.measurements.hips %}
+                    <div class="detail-row">
+                        <span class="detail-key">Hips</span>
+                        <span class="detail-val">{{ techpack.json_data.measurements.hips }}"</span>
+                    </div>
+                    {% endif %}
+                    {% if techpack.json_data.measurements.rise %}
+                    <div class="detail-row">
+                        <span class="detail-key">Rise</span>
+                        <span class="detail-val">{{ techpack.json_data.measurements.rise }}"</span>
+                    </div>
+                    {% endif %}
+                    {% if techpack.json_data.measurements.inseam %}
+                    <div class="detail-row">
+                        <span class="detail-key">Inseam</span>
+                        <span class="detail-val">{{ techpack.json_data.measurements.inseam }}"</span>
+                    </div>
+                    {% endif %}
+                    {% if techpack.json_data.measurements.outseam %}
+                    <div class="detail-row">
+                        <span class="detail-key">Outseam</span>
+                        <span class="detail-val">{{ techpack.json_data.measurements.outseam }}"</span>
+                    </div>
+                    {% endif %}
+                    {% if techpack.json_data.measurements.thigh %}
+                    <div class="detail-row">
+                        <span class="detail-key">Thigh</span>
+                        <span class="detail-val">{{ techpack.json_data.measurements.thigh }}"</span>
+                    </div>
+                    {% endif %}
+                    {% if techpack.json_data.measurements.leg_opening %}
+                    <div class="detail-row">
+                        <span class="detail-key">Leg Opening</span>
+                        <span class="detail-val">{{ techpack.json_data.measurements.leg_opening }}"</span>
+                    </div>
+                    {% endif %}
+                {% else %}
+                    {% if techpack.json_data.measurements.chest %}
+                    <div class="detail-row">
+                        <span class="detail-key">Chest</span>
+                        <span class="detail-val">{{ techpack.json_data.measurements.chest }}"</span>
+                    </div>
+                    {% endif %}
+                    {% if techpack.json_data.measurements.waist %}
+                    <div class="detail-row">
+                        <span class="detail-key">Waist</span>
+                        <span class="detail-val">{{ techpack.json_data.measurements.waist }}"</span>
+                    </div>
+                    {% endif %}
+                    {% if techpack.json_data.measurements.shoulder %}
+                    <div class="detail-row">
+                        <span class="detail-key">Shoulder</span>
+                        <span class="detail-val">{{ techpack.json_data.measurements.shoulder }}"</span>
+                    </div>
+                    {% endif %}
+                    {% if techpack.json_data.measurements.sleeve_length %}
+                    <div class="detail-row">
+                        <span class="detail-key">Sleeve</span>
+                        <span class="detail-val">{{ techpack.json_data.measurements.sleeve_length }}"</span>
+                    </div>
+                    {% endif %}
+                    {% if techpack.json_data.measurements.body_length %}
+                    <div class="detail-row">
+                        <span class="detail-key">Body</span>
+                        <span class="detail-val">{{ techpack.json_data.measurements.body_length }}"</span>
+                    </div>
+                    {% endif %}
+                    {% if techpack.json_data.measurements.sleeve_width %}
+                    <div class="detail-row">
+                        <span class="detail-key">Sleeve Width</span>
+                        <span class="detail-val">{{ techpack.json_data.measurements.sleeve_width }}"</span>
+                    </div>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- construction -->
+        <div class="detail-section">
+            <div class="detail-section-head">Construction</div>
+            <div class="detail-section-body">
+                {% if techpack.json_data.construction.seam_type %}
+                <div class="detail-row">
+                    <span class="detail-key">Seam</span>
+                    <span class="detail-val">{{ techpack.json_data.construction.seam_type }}</span>
+                </div>
+                {% endif %}
+                {% if techpack.json_data.construction.closure_type %}
+                <div class="detail-row">
+                    <span class="detail-key">Closure</span>
+                    <span class="detail-val">{{ techpack.json_data.construction.closure_type }}</span>
+                </div>
+                {% endif %}
+                {% if techpack.json_data.construction.pockets %}
+                <div class="detail-row">
+                    <span class="detail-key">Pockets</span>
+                    <span class="detail-val">{{ techpack.json_data.construction.pockets }}</span>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+    </div><!-- /detail-grid -->
+
+    <div class="action-buttons">
+        <a href="{% url 'techpack_generator:modify' techpack.pk %}" class="btn-large btn-modify">
+            Modify
+        </a>
+        <a href="{% url 'techpack_generator:download_svg' techpack.pk %}" class="btn-large btn-secondary">
+            Download SVG
+        </a>
+        <a href="{% url 'techpack_generator:create' %}" class="btn-large">
+            Create New
+        </a>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}TECH.PACK{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;700;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=10">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+<header class="header">
+    <a href="{% url 'techpack_generator:home' %}" class="header-logo">
+        <span class="asterisk">*</span>
+        <span class="brand">Tech.Pack</span>
+    </a>
+    <div class="auth-buttons">
+        {% if user.is_authenticated %}
+            <span class="username">{{ user.username }}</span>
+            <form method="post" action="{% url 'logout' %}" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" class="btn-auth">Logout</button>
+            </form>
+        {% else %}
+            <button onclick="openLoginModal()" class="btn-auth">Login</button>
+            <a href="{% url 'techpack_generator:register' %}" class="btn-auth">Register</a>
+        {% endif %}
+    </div>
+</header>
+
+<!-- login modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeLoginModal()">&times;</span>
+        <h2>Login</h2>
+        <form method="post" action="{% url 'techpack_generator:login' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="modal-username">Username</label>
+                <input type="text" id="modal-username" name="username" required autofocus>
+            </div>
+            <div class="form-group">
+                <label for="modal-password">Password</label>
+                <input type="password" id="modal-password" name="password" required>
+            </div>
+            <input type="hidden" name="next" value="{{ request.path }}">
+            <button type="submit" class="btn-submit">Login</button>
+        </form>
+    </div>
+</div>
+
+<!-- flash messages -->
+{% if messages %}
+<div class="messages-container">
+    {% for message in messages %}
+    <div class="alert {{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<div class="container">
+
+    <!-- sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>Projects</h2>
+            {% if user.is_authenticated %}
+            <a href="{% url 'techpack_generator:create' %}" class="sidebar-new-btn">+ New</a>
+            {% endif %}
+        </div>
+        <div class="project-list">
+            {% for techpack in all_techpacks %}
+            <div class="project-item-wrapper {% if techpack.pk == current_techpack_id %}active{% endif %}">
+                <a href="{% url 'techpack_generator:detail' techpack.pk %}" class="project-item-link">
+                    <div class="project-name">{{ techpack.name }}</div>
+                    <div class="project-date">{{ techpack.created_at|date:"d M Y" }}</div>
+                </a>
+                <div class="project-menu">
+                    <button class="project-menu-btn" onclick="toggleMenu(event, {{ techpack.pk }})">&#x2026;</button>
+                    <div class="project-menu-dropdown" id="menu-{{ techpack.pk }}">
+                        <form method="post" action="{% url 'techpack_generator:delete' techpack.pk %}"
+                              onsubmit="return confirm('Delete {{ techpack.name }}?');">
+                            {% csrf_token %}
+                            <button type="submit" class="menu-delete-btn">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="sidebar-empty">
+                No projects yet.<br>Create one to get started.
+            </div>
+            {% endfor %}
+        </div>
+    </nav>
+
+    <!-- main content -->
+    <main class="main-content" id="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+</div>
+
+<script>
+function openLoginModal() {
+    document.getElementById('loginModal').style.display = 'block';
+    document.getElementById('modal-username').focus();
+}
+
+function closeLoginModal() {
+    document.getElementById('loginModal').style.display = 'none';
+}
+
+window.addEventListener('click', function(e) {
+    const modal = document.getElementById('loginModal');
+    if (e.target === modal) closeLoginModal();
+    if (!e.target.closest('.project-menu')) {
+        document.querySelectorAll('.project-menu-dropdown').forEach(el => el.style.display = 'none');
+    }
+});
+
+function toggleMenu(e, pk) {
+    e.preventDefault();
+    e.stopPropagation();
+    const menu = document.getElementById('menu-' + pk);
+    const isOpen = menu.style.display === 'block';
+    document.querySelectorAll('.project-menu-dropdown').forEach(el => el.style.display = 'none');
+    if (isOpen) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    menu.style.top  = rect.bottom + 'px';
+    menu.style.left = (rect.right - 110) + 'px';
+    // move to body so no overflow/transform ancestor can affect position
+    if (menu.parentElement !== document.body) document.body.appendChild(menu);
+    menu.style.display = 'block';
+}
+
+// auto-dismiss alerts after 4s
+document.querySelectorAll('.alert').forEach(function(el) {
+    setTimeout(function() {
+        el.style.transition = 'opacity 0.4s';
+        el.style.opacity = '0';
+        setTimeout(function() { el.remove(); }, 400);
+    }, 4000);
+});
+</script>
+
+{% block extra_js %}{% endblock %}
+</body>
+</html>
