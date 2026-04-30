@@ -100,7 +100,7 @@ Stop with `Ctrl+C`, or `docker compose down` from another terminal. The SQLite d
 ## Install and run without Docker
 
 ```
-git clone https://campus.cs.le.ac.uk/gitlab/ug_project/25-26/ghl5.git
+git clone https://github.com/George-H-L/TechPack-transformer
 cd ghl5/TechPackApp
 python -m venv venv
 ```
