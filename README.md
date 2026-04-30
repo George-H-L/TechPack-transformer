@@ -19,8 +19,8 @@ First build takes 5-10 minutes (downloads Python image, installs PyTorch CPU bui
 ## Without Docker
 
 ```
-git clone https://github.com/George-H-L/TechPack-transformer.git
-cd TechPack-transformer/TechPackApp
+git clone https://campus.cs.le.ac.uk/gitlab/ug_project/25-26/ghl5.git
+cd ghl5/TechPackApp
 python -m venv venv
 ```
 
